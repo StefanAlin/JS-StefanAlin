@@ -84,31 +84,30 @@ smallestNumber(smArray, minimum);
 
 var displayPrimeNumber = function(num) {
 	// create a loop starting starting with 2
-    // create cases for 0,1 and 2
-    for(var i = 3;i < num; i++){
-        if(num % i === 0){
-            console.log(num + ' Is not prime');
-            // break other whise i will increment until is >= num
-            break;
-        }else{
-            console.log(num + ' Is prime');
-            break;
-        }
-    }
+	// create cases for 0,1 and 2
+	if (num <= 0 || num === 1) {
+		console.log(num + " Is not prime");
+	}
+	if (num === 2) {
+		console.log(num + " is prime");
+	}
 
-    if(num <= 0 || num === 1){
-        console.log(num + ' Is not prime')
-    }
+	for (var i = 2; i < num; i++) {
+		if (num % i === 0) {
+			console.log(num + " Is not prime");
+		}
+		if(num % i !== 0){
+			console.log(num + " is prime");
+		}
+	}
+	
+
 };
-
-//  a for loop to check all prime numbers up to 100
-displayPrimeNumber(0);
+// displayPrimeNumber(99);
 
 
-// check prime/not prime up to 100
-
-for(var i = 0; i <= 101; i++){
-    if(displayPrimeNumber(i)){
-        console.log(i)
-    }
+for(var i = 0; i < 101; i++){
+	displayPrimeNumber(i)
 }
+
+// Dau push asa si mai vedem maine....
