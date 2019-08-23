@@ -12,3 +12,13 @@ let buttonTimmer = () => {
 };
 button.addEventListener("click", loadingButton);
 button.addEventListener("click", buttonTimmer);
+
+function printNumbers(from, to) {
+	for (let i = from; i <= to; i++) {
+		return i;
+	}
+}
+function oneSecond() {
+	return setInterval(printNumbers(1, 10), 1000);
+}
+oneSecond();
