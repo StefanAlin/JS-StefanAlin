@@ -14,11 +14,13 @@ button.addEventListener("click", loadingButton);
 button.addEventListener("click", buttonTimmer);
 
 function printNumbers(from, to) {
-	for (let i = from; i <= to; i++) {
-		return i;
+	var counter = 0;
+	let interval = setInterval(function() {
+		counter += 1;
+		console.log(counter);
+	}, 1000);
+	if (counter === to) {
+		clearInterval();
 	}
 }
-function oneSecond() {
-	return setInterval(printNumbers(1, 10), 1000);
-}
-oneSecond();
+printNumbers(1, 10);
