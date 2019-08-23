@@ -1,0 +1,11 @@
+.row {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(salmon, pink);
+	padding: 2.5rem;
+}
+.hidden {
+	display: none;
+}
